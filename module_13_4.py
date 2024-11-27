@@ -60,7 +60,7 @@ async def result_info(message, state):
     growth = data.get('growth')
 
     # Выводим информацию
-    result = int(weight) * 10 + int(growth) * 6.25 + int(age) * 5
+    result = int(weight) * 10 + int(growth) * 6.25 - int(age) * 5 + 5
     await message.answer(f'Ваша дневная норма калорий: {result}')
 
     # Сбрасываем состояние
